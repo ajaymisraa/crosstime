@@ -1,0 +1,8 @@
+model NameMapping {
+  id        String   @id @default(cuid())
+  eventId   String   @unique
+  mappings  Json     // Stores the name mappings
+  counter   Int      // Keeps track of the next number to use
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+} 
