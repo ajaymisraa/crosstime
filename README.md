@@ -112,5 +112,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For support, please open an issue in the GitHub repository or contact Ajay.  
 
-Made by Ajay Misra (ajaymisra.com). # Crosstime
+Made by [Ajay Misra](https://ajaymisra.com). 
 # crosstime
