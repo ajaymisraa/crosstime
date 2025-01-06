@@ -499,7 +499,7 @@ export function UploadCalendarDialog({
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-lg font-medium text-red-400">
-                    Rate Limit Exceeded
+                    Something Went Wrong
                   </h3>
                   <p className="text-sm text-red-300/80">
                     Please wait a moment before trying again. This is likely a temporary issue. If this persists, please let us know @ help@crosstime.org.
