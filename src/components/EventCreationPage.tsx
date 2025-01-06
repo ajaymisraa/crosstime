@@ -49,23 +49,30 @@ const US_TIMEZONES = [
   { value: 'Pacific/Honolulu', label: 'Hawaii Time (HT)' },
 ];
 
-const FUN_ADJECTIVES = [
-  "Awesome", "Brilliant", "Cosmic", "Dancing", "Energetic",
-  "Fantastic", "Groovy", "Harmonious", "Incredible", "Jazzy"
-];
-
-const FUN_NOUNS = [
-  "Pandas", "Unicorns", "Dragons", "Wizards", "Ninjas",
-  "Pirates", "Robots", "Dinosaurs", "Astronauts", "Penguins"
+const EMOJIS = [
+  // Fun & Creative
+  '🌟', '🎨', '🎭', '🌈', '🎪', '🎠', '🎡', '🎢', '🎬', '🎸',
+  // Animals
+  '🦋', '🐬', '🦜', '🦒', '🦁', '🦊', '🐘', '🦄', '🐠', '🦩',
+  // Nature
+  '🌺', '🌸', '🍀', '🌴', '🌵', '🌹', '🌻', '🍁', '🌿', '🌳',
+  // Games & Activities
+  '🎮', '🎲', '🎯', '🎪', '🎨', '⚽', '🎱', '🎳', '🎵', '🎹',
+  // Space & Stars
+  '🚀', '✨', '💫', '⭐', '🌙', '🌎', '☄️', '🌍', '🌌', '🛸',
+  // Weather & Elements
+  '🌞', '⛈️', '🌈', '❄️', '🌊', '🔥', '⚡', '🌪️', '☁️', '🌅',
+  // Food & Drinks
+  '🍕', '🍦', '🍰', '🎂', '🍭', '🍪', '🧁', '🥨', '🍩', '🍫'
 ];
 
 const generateFunName = () => {
-  const adjective = FUN_ADJECTIVES[Math.floor(Math.random() * FUN_ADJECTIVES.length)];
-  const noun = FUN_NOUNS[Math.floor(Math.random() * FUN_NOUNS.length)];
-  return `${adjective} ${noun} Meeting`;
+  const shuffled = [...EMOJIS].sort(() => 0.5 - Math.random());
+  const selected = shuffled.slice(0, 3);
+  return selected.join('');
 };
 
-const DEFAULT_PLACEHOLDER = "Fantastic Pandas Meeting";
+const DEFAULT_PLACEHOLDER = "Incredible Motionful Meeting";
 
 const EventCreationPage = () => {
   const router = useRouter();

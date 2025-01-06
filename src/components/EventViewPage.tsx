@@ -1593,7 +1593,9 @@ const EventViewPage = () => {
       <UploadCalendarDialog
         open={showUploadDialog}
         onOpenChange={setShowUploadDialog}
+        eventData={{ selectedDates: eventData.selectedDates.map(date => format(date, 'yyyy-MM-dd')) }}
         onAnalyzeComplete={(newTimeSlots) => {
+          console.log('DEBUG - Received time slots:', newTimeSlots);
           setSelectedTimeSlots(newTimeSlots);
           if (isSignedIn && debouncedSubmitRef.current) {
             debouncedSubmitRef.current(newTimeSlots);
